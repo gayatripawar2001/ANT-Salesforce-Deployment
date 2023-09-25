@@ -7,7 +7,7 @@
 	<!--For Sandbox -->	
 	
 	<target name="retrieveCode">
-      <sf:retrieve username="imomersk@gmail.com" password="${DEV.password}" serverurl="${DEV.serverurl}" retrieveTarget="codepkg1" unpackaged="codepkg1/package.xml"/>
+      <sf:retrieve username="${sf.username}" password="${sf.password}" serverurl="https://login.salesforce.com" retrieveTarget="codepkg1" unpackaged="codepkg1/package.xml"/>
     </target> 
 	<taskdef resource="com/salesforce/antlib.xml" uri="antlib:com.salesforce">
         <classpath>
@@ -15,7 +15,7 @@
         </classpath>
     </taskdef>
 	<target name="deployCodeCheckOnly" description="Does not actually save changes to server">
-      <sf:deploy username="imomersk@gmail.com" password="${DEVP.password}" serverurl="${DEVP.serverurl}" deployRoot="codepkg1" checkOnly="true" runAllTests="false"/>
+      <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="https://login.salesforce.com" deployRoot="codepkg1" checkOnly="true" runAllTests="false"/>
     </target>
 	
 	<target name="deployCode" description="Deploy the changes">
@@ -23,11 +23,11 @@
     </target>
 	
 	<target name="deleteCode" description="Delete the changes">
-      <sf:deploy username="imomersk@gmail.com" password="${DEVP.password}" serverurl="${DEVP.serverurl}" deployRoot="codepkg1" checkOnly="false" runAllTests="false"/>
+      <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="https://login.salesforce.com" deployRoot="codepkg1" checkOnly="false" runAllTests="false"/>
     </target>
 	
 	<target name="deleteCodeCheckOnly" description="Validate Deletion of the components">
-      <sf:deploy username="imomersk@gmail.com}" password="${DEVP.password}" serverurl="${DEVP.serverurl}" deployRoot="codepkg1" checkOnly="true" runAllTests="false" >
+      <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="https://login.salesforce.com" deployRoot="codepkg1" checkOnly="true" runAllTests="false" >
 		</sf:deploy>
 	</target>
 	
