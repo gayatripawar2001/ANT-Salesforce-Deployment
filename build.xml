@@ -124,39 +124,3 @@
 
 
 
-
-
-<!-- <project name="Sample usage of Salesforce Ant tasks" basedir="." default="deployCodeCheckOnly" xmlns:sf="antlib:com.salesforce">
-
-    <property file="build.properties"/>
-    <property environment="env"/> 
-	
-	
-	<!--For Sandbox -->	
-	
-	<target name="retrieveCode">
-      <sf:retrieve username="${sf.username}" password="${sf.password}" serverurl="https://login.salesforce.com" retrieveTarget="codepkg1" unpackaged="codepkg1/package.xml"/>
-    </target> 
-	<taskdef resource="com/salesforce/antlib.xml" uri="antlib:com.salesforce">
-        <classpath>
-            <pathelement location="../ant-salesforce.jar" />        	
-        </classpath>
-    </taskdef>
-	<target name="deployCodeCheckOnly" description="Does not actually save changes to server">
-      <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="https://login.salesforce.com" deployRoot="codepkg1" checkOnly="true" runAllTests="true" logtype="Detail" />
-    </target>
-	
-	<target name="deployCode" description="Deploy the changes">
-      <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="https://login.salesforce.com" deployRoot="codepkg1" checkOnly="false" runAllTests="true" logtype="Detail" />
-    </target>
-	
-	<target name="deleteCode" description="Delete the changes">
-      <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="https://login.salesforce.com" deployRoot="codepkg1" checkOnly="false" runAllTests="true" logtype="Detail" />
-    </target>
-	
-	<target name="deleteCodeCheckOnly" description="Validate Deletion of the components">
-      <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="https://login.salesforce.com" deployRoot="codepkg1" checkOnly="true" runAllTests="true" logtype="Detail" >
-		</sf:deploy>
-	</target>
-
-</project> -->
