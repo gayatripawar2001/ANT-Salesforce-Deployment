@@ -426,8 +426,8 @@
         <relatedList>RelatedPartnerList</relatedList>
     </relatedLists>
     <relatedLists>
-        <fields>MEMBER_NAME</fields>
-        <fields>TEAM_MEMBER_ROLE</fields>
+        <fields>ACCOUNT.NAME</fields>
+        <fields>PARTNER.ROLE</fields>
         <relatedList>RelatedAccountSalesTeam</relatedList>
     </relatedLists>
     <relatedObjects>ParentId</relatedObjects>
